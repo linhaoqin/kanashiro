@@ -4,17 +4,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-/*
- * Add annotations here
- */
+@Controller
+@RequestMapping("/inquiry")
 public class InquiryController {
 
-// 	private final InquiryService inquiryService;
+ 	private final InquiryService inquiryService;
 
-	//Add an annotation here
-// 	public InquiryController(InquiryService inquiryService){
-// 		this.inquiryService = inquiryService;
-// 	}
+	@Autowired
+ 	public InquiryController(InquiryService inquiryService){
+ 		this.inquiryService = inquiryService;
+ 	}
 
 	@GetMapping
 	public String index(Model model) {
